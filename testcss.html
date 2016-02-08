@@ -20,7 +20,8 @@
 }
 /* Версия 420 открывается на мобильнике при вертикальной ориентации. Отображается от 0px до 620px */
 @media only screen and (orientation:portrait) and (max-device-width: 620px),
-		(max-width: 620px)
+		only screen and (max-width: 620px)
+{
 	.pageWrap {
 		width: 420px;
 	}
@@ -30,9 +31,9 @@
 }
 
 /* Версия 960 открывается на планшете при вертикальной ориентации + на мобильнике при горизонтальной ориентации. Отображается от 621px до 1060px. */
-@media  only screen and (orientation:landscape) and (max-device-width: 620px),
+@media  only screen and (orientation:landscape) and (max-device-height: 620px),
 		only screen and (orientation:portrait) and (min-width: 621px),
-		(min-width: 621px)
+		only screen and (min-width: 621px)
 {
 	.pageWrap {
 		width: 960px;
@@ -43,12 +44,12 @@
 }
 
 /* Версия 1280 открывается на настольном компьютере + на планшете при горизонтальной ориентации. Отображается от 1061px до конца. */
-@media  only screen and (orientation:landscape) and (max-device-width: 620px),
+@media  only screen and (orientation:landscape) and (min-device-height: 620px),
 		only screen and (orientation:portrait) and (min-width: 1061px),
-		(min-width: 1061px)
+		only screen and (min-width: 1061px)
 {
 	.pageWrap {
-		width: 960px;
+		width: 1280px;
 	}
 	.pageWrap span:after { 
 		content: "1280";
@@ -64,7 +65,7 @@ only screen and ( min-device-pixel-ratio: 2) and (min-width: 1280px),
 only screen and ( min-resolution: 192dpi) and (min-width: 1280px),
 only screen and ( min-resolution: 2dppx) and (min-width: 1280px) { 
 	.pageWrap {
-		width: 1280px;
+		width: 640px;
 	}
 	.pageWrap span:after { 
 		content: "1280 Ретина";
